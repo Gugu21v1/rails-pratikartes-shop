@@ -1,0 +1,8 @@
+<h1>Post</h1>
+<%= @post.title %>
+<br>
+<%= @post.body %>
+<br>
+<%= cl_image_tag @post.img_url.key, height: 300, width: 400, crop: :fill %>
+<br>
+<%= @post.data %>
