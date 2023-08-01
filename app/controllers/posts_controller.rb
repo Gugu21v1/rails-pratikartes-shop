@@ -21,7 +21,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     agora = Time.now
     @post.data = agora.strftime("%d/%m/%Y - %H:%M:%S")
-    if @post.save!
+    if @post.save
       redirect_to post_path(@post)
     else
       render :new, status: :unprocessable_entity

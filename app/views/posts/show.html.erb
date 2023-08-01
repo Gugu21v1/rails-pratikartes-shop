@@ -4,7 +4,7 @@
   </h1>
   <%= cl_image_tag @post.img_url.key, height: 300, width: 400, crop: :fill %>
   <br>
-  <p id="texto-blog"><span class="ms-3"></span><%= @post.body %></p>
+  <p id="texto-blog"><span class="ms-3"></span><%= @post.body.split(/\\n/).join("<br />").html_safe %></p>
   <br>
   <br>
   <%= @post.data %>
@@ -17,9 +17,3 @@
   <% end %>
   <%= link_to "Posts", posts_path %>
 </section>
-<script>
-  const texto = document.querySelector("#texto-blog").innerText
-  document.getElementById('texto-blog').value = texto
-  const a = document.getElementById('texto-blog').value.replace(/\\n/g, '<br>')
-  document.getElementById('texto-blog').innerHTML = a
-</script>
