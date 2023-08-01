@@ -1,18 +1,25 @@
-<h1>Post</h1>
-<%= @post.title %>
-<br>
-<%= @post.body %>
-<br>
-<%= cl_image_tag @post.img_url.key, height: 300, width: 400, crop: :fill %>
-<br>
-<%= @post.data %>
-<br>
-<br>
-<br>
-<% if current_user.admin == true %>
-  <%= link_to "Excluir Post",
+<section class="container text-center mt-3">
+  <h1>
+    <%= @post.title %>
+  </h1>
+  <%= cl_image_tag @post.img_url.key, height: 300, width: 400, crop: :fill %>
+  <br>
+  <p id="texto-blog"><span class="ms-3"></span><%= @post.body %></p>
+  <br>
+  <br>
+  <%= @post.data %>
+  <br>
+  <% if current_user.admin == true %>
+    <%= link_to "Excluir Post",
     post_path(@post),
     data: {turbo_method: :delete, turbo_confirm: "Você tem certeza que deseja excluir este Post? Essa ação não pode ser desfeita!"}
   %>
-<% end %>
-<%= link_to "Posts", posts_path %>
+  <% end %>
+  <%= link_to "Posts", posts_path %>
+</section>
+<script>
+  const texto = document.querySelector("#texto-blog").innerText
+  document.getElementById('texto-blog').value = texto
+  const a = document.getElementById('texto-blog').value.replace(/\\n/g, '<br>')
+  document.getElementById('texto-blog').innerHTML = a
+</script>
