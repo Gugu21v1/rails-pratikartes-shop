@@ -6,3 +6,11 @@
 <%= cl_image_tag @post.img_url.key, height: 300, width: 400, crop: :fill %>
 <br>
 <%= @post.data %>
+<br>
+<br>
+<br>
+<%= link_to "Excluir Post",
+    post_path(@post),
+    data: {turbo_method: :delete, turbo_confirm: "Você tem certeza que deseja excluir este Post? Essa ação não pode ser desfeita!"}
+  %>
+<%= link_to "Posts", posts_path %>

@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [ :index, :show ]
+
   def index
     @posts = Post.all
   end
@@ -9,6 +11,10 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    if current_user.admin == false
+      redirect_to root_path
+      flash[:alert] = "Somente Admins podem fazer criação de novos posts."
+    end
   end
 
   def create
@@ -23,6 +29,9 @@ class PostsController < ApplicationController
   end
 
   def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to posts_path
   end
 
   private

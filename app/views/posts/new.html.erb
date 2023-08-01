@@ -1,6 +1,8 @@
-<%= simple_form_for(@post) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :body %>
-  <%= f.input :img_url, as: :file %>
-  <%= f.submit %>
-<% end %>
+<div class="container mt-5">
+  <%= simple_form_for(@post) do |f| %>
+    <%= f.input :title, placeholder: "Digite o Título do post", label: "Título" %>
+    <%= f.input :body, placeholder: "Texto", label: "Digite o corpo do texto", as: :text %>
+    <%= f.input :img_url, as: :file %>
+    <%= f.submit %>
+  <% end %>
+</div>
