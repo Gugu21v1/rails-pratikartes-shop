@@ -1,9 +1,13 @@
-<div class="container mt-5">
-  <%= simple_form_for(@post) do |f| %>
-    <%= f.input :title, placeholder: "Digite o Título do post", label: "Título" %>
-    <%= f.input :body, placeholder: "Texto", label: "Digite o corpo do texto", as: :text %>
-    <%= f.input :img_url, as: :file %>
-    <%= f.submit %>
-  <% end %>
-  **Para pular linhas no corpo do texto, adicione \n
-</div>
+<section class="margin-top-new-post margin-bottom">
+  <div class="container mt-5">
+    <%= simple_form_for(@post) do |f| %>
+      <%= f.input :title, placeholder: "Digite o Título do post", label: "Título" %>
+      <%= f.input :body, placeholder: "Texto", label: "Digite o corpo do texto", as: :text %>
+      **Para pular linhas no corpo do texto, adicione \n
+      <br>
+      <br>
+      <%= f.input :img_url, as: :file, label: "Imagem" %>
+      <%= f.submit "Criar post", class: "botao-submit" %>
+    <% end %>
+  </div>
+</section>

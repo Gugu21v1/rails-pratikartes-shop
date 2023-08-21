@@ -1,4 +1,14 @@
-<h1>Posts</h1>
-<% @posts.each do |post| %>
-  <%= link_to post.title, post_path(post) %>
-<% end %>
+<section class="blog margin-top margin-bottom">
+  <div>
+    <% valor = 0 %>
+    <% @posts.each do |post| %>
+      <div class="post">
+        <%= cl_image_tag post.img_url.key, height: 300, width: 400, crop: :fill, alt: "post-#{valor}" %>
+        <h4><%= post.title %></h4>
+        <p><%= post.body.split(/\\n/).join("<br />").html_safe %></p>
+        <%= link_to "Continuar Lendo", post_path(post), class: "continuar" %>
+      </div>
+      <% valor += 1 %>
+    <% end %>
+  </div>
+</section>
