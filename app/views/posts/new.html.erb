@@ -1,4 +1,4 @@
-<section class="margin-top-new-post margin-bottom">
+<section class="container text-center p-5 margin-top-form form-login">
   <div class="container mt-5">
     <%= simple_form_for(@post) do |f| %>
       <%= f.input :title, placeholder: "Digite o Título do post", label: "Título" %>
@@ -11,3 +11,13 @@
     <% end %>
   </div>
 </section>
+
+<script>
+  document.querySelectorAll(".navbar-collapse.collapse.clearfix .navigation.clearfix>li").forEach((element) => {
+    if(element.innerText.toUpperCase() === "BLOG") {
+      element.classList.add("current")
+    } else {
+      element.classList.remove("current")
+    }
+  });
+</script>

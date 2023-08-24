@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "flaticon";
+  src: url("./flaticon.ttf?229421284b5284274ba98ecbe4bcbd1d") format("truetype"), url("./flaticon.woff?229421284b5284274ba98ecbe4bcbd1d") format("woff"), url("./flaticon.woff2?229421284b5284274ba98ecbe4bcbd1d") format("woff2"), url("./flaticon.eot?229421284b5284274ba98ecbe4bcbd1d#iefix") format("embedded-opentype"), url("./flaticon.svg?229421284b5284274ba98ecbe4bcbd1d#flaticon") format("svg");
+}
+i[class^=flaticon-]:before, i[class*=" flaticon-"]:before {
+  font-family: flaticon !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-shape:before {
+  content: "\f101";
+}
+
+.flaticon-rating:before {
+  content: "\f102";
+}
+
+.flaticon-good-quality:before {
+  content: "\f103";
+}
+
+.flaticon-rating-1:before {
+  content: "\f104";
+}
+
+.flaticon-right-quote:before {
+  content: "\f105";
+}
+
+.flaticon-reading-book:before {
+  content: "\f106";
+}
+
+.flaticon-world:before {
+  content: "\f107";
+}
+
+.flaticon-mortarboard:before {
+  content: "\f108";
+}
+
+.flaticon-cheese-burger:before {
+  content: "\f109";
+}/*# sourceMappingURL=flaticon.css.map */

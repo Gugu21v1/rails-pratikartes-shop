@@ -1,0 +1,30 @@
+<section class="container text-center mt-3">
+  <h1>
+    <%= @produto.nome %>
+  </h1>
+  <%= cl_image_tag @produto.foto.key, height: 300, width: 400, crop: :fill %>
+  <br>
+  <p id="texto-produto"><span class="ms-3"></span><%= @produto.desc.split(/\\n/).join("<br />").html_safe %></p>
+  <br>
+  <br>
+  <%= @produto.valor %>
+  <br>
+  <% if current_user %>
+    <% if current_user.admin == true %>
+      <%= link_to "Excluir produto",
+    produto_path(@produto),
+    data: {turbo_method: :delete, turbo_confirm: "Você tem certeza que deseja excluir este produto? Essa ação não pode ser desfeita!"}
+  %>
+    <% end %>
+  <% end %>
+  <%= link_to "Produtos", produtos_path %>
+</section>
+<script>
+  document.querySelectorAll(".navbar-collapse.collapse.clearfix .navigation.clearfix>li").forEach((element) => {
+    if(element.innerText.toUpperCase() === "LOJA") {
+      element.classList.add("current")
+    } else {
+      element.classList.remove("current")
+    }
+  });
+</script>

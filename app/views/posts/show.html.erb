@@ -9,11 +9,22 @@
   <br>
   <%= @post.data %>
   <br>
-  <% if current_user.admin == true %>
-    <%= link_to "Excluir Post",
+  <% if current_user %>
+    <% if current_user.admin == true %>
+      <%= link_to "Excluir Post",
     post_path(@post),
     data: {turbo_method: :delete, turbo_confirm: "Você tem certeza que deseja excluir este Post? Essa ação não pode ser desfeita!"}
   %>
+    <% end %>
   <% end %>
   <%= link_to "Posts", posts_path %>
 </section>
+<script>
+  document.querySelectorAll(".navbar-collapse.collapse.clearfix .navigation.clearfix>li").forEach((element) => {
+    if(element.innerText.toUpperCase() === "BLOG") {
+      element.classList.add("current")
+    } else {
+      element.classList.remove("current")
+    }
+  });
+</script>

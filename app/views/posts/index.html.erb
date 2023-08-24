@@ -12,3 +12,12 @@
     <% end %>
   </div>
 </section>
+<script>
+  document.querySelectorAll(".navbar-collapse.collapse.clearfix .navigation.clearfix>li").forEach((element) => {
+    if(element.innerText.toUpperCase() === "BLOG") {
+      element.classList.add("current")
+    } else {
+      element.classList.remove("current")
+    }
+  });
+</script>

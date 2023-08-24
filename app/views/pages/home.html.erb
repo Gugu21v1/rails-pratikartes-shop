@@ -1,1 +1,585 @@
-<h1>Início</h1>
+<!-- Preloader -->
+<div class="preloader"></div>
+<!--Form Back Drop-->
+<div class="form-back-drop"></div>
+<!-- Hidden Sidebar -->
+<section class="hidden-bar">
+  <div class="inner-box text-center">
+    <div class="cross-icon"><span class="fa fa-times"></span></div>
+    <div class="title">
+      <h4>Marcar uma Reunião</h4>
+    </div>
+    <!--Appointment Form-->
+    <div class="appointment-form">
+      <form method="post" action="#">
+        <div class="form-group">
+          <input
+            type="text"
+            name="text"
+            value=""
+            placeholder="Nome"
+            required
+            />
+        </div>
+        <div class="form-group">
+          <input
+            type="email"
+            name="email"
+            value=""
+            placeholder="Email"
+            required
+            />
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Mensagem" rows="5"></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="theme-btn">Enviar</button>
+        </div>
+      </form>
+    </div>
+    <!--Social Icons-->
+    <div class="social-style-one">
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</section>
+<!--End Hidden Sidebar -->
+<!-- Hero Section Start -->
+<section class="hero-section rel z-1 pt-150 rpt-135 pb-75 rpb-100">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <div class="hero-content rpt-25 rmb-75">
+          <span class="sub-title style-two mb-20 wow fadeInUp delay-0-2s"
+            >Coaching & Palestras</span
+            >
+          <h1 class="mb-20 wow fadeInUp delay-0-4s">
+            Aprenda, Evolua e Realize: Seja guiado pelos nossos experts
+          </h1>
+          <p class="wow fadeInUp delay-0-6s">
+            Nossas palestras, cursos e treinamentos são verdadeiros shows
+            de motivação, com dinâmicas, oficinas e ferramentas de
+            conhecimento e autoconhecimento, que levam os participantes
+            experenciar um processo de transformação individual e coletiva
+            em seu ambiente de trabalho, escolar e/ou familiar.
+          </p>
+          <div class="hero-btn mt-30 wow fadeInUp delay-0-8s">
+            <%= link_to "Ver Serviços<i class='fas fa-arrow-right'></i>".html_safe, servicos_path, class: "theme-btn" %>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div
+          class="hero-right-images text-lg-right wow fadeInUp delay-0-2s"
+          >
+          <%= image_tag "hero/hero-right.png", alt:"Hero", title: "Hero" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class="bg-text">coach</span>
+</section>
+<!-- Hero Section End -->
+<!-- Features Section Start -->
+<section class="features-section rel z-1 pt-80 pb-40 bg-blue text-white">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-item wow fadeInUp delay-0-2s">
+          <div class="image">
+            <%= image_tag "features/icon1.png", alt:"Icon", title: "icon" %>
+          </div>
+          <div class="content">
+            <h4>Cursos Presenciais e Online</h4>
+            <p>
+              Possuímos cursos presenciais e online sobre Memorização,
+              Leitura Dinâmica, Combate Contra as Drogas e muito mais!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-item wow fadeInUp delay-0-4s">
+          <div class="image">
+            <%= image_tag "features/icon2.png", alt:"Icon", title: "icon" %>
+          </div>
+          <div class="content">
+            <h4>Produtos Físicos</h4>
+            <p>
+              Sit amet consectetur adipisc elit sed do eiusmod temporse
+              incididunt labore dolore
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-item wow fadeInUp delay-0-6s">
+          <div class="image">
+            <%= image_tag "features/icon1.png", alt:"Icon", title: "icon" %>
+          </div>
+          <div class="content">
+            <h4>Reuniões Presenciais ou Online</h4>
+            <p>
+              Precisando de um Coach Particular? Entre em contato e marque
+              já a sua reunião!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= image_tag "shapes/rectangle-dots.png", alt:"shape", class: "rectangle-dots" %>
+  <%= image_tag "shapes/circle-dots.png", alt:"shape", class: "circle-dots" %>
+</section>
+<!-- Features Section End -->
+<!-- About Section Start -->
+<section class="about-section pt-130 rpt-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 align-self-end">
+        <div class="about-man rmb-75 wow fadeInLeft delay-0-2s">
+          <%= image_tag "about/man.png", alt:"man" %>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div
+          class="about-content rel z-2 pb-115 rpb-85 wow fadeInRight delay-0-2s"
+          >
+          <div class="section-title mb-40">
+            <span class="sub-title mb-25">Sobre Nós</span>
+            <h2>Fornecemos Life Coach de Consultores Especialistas</h2>
+          </div>
+          <div class="about-features">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="feature-item">
+                  <div class="icon">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <div class="content">
+                    <h5>Coach Exclusivo</h5>
+                    <p>Sit consectetur adipiscing eiuse tempor incides</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="feature-item">
+                  <div class="icon">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <div class="content">
+                    <h5>Combate às Drogas</h5>
+                    <p>Sit consectetur adipiscing eiuse tempor incides</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="feature-item">
+                  <div class="icon">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <div class="content">
+                    <h5>Ebooks</h5>
+                    <p>Sit consectetur adipiscing eiuse tempor incides</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="feature-item">
+                  <div class="icon">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <div class="content">
+                    <h5>Vídeoaulas</h5>
+                    <p>Sit consectetur adipiscing eiuse tempor incides</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-btns">
+            <%= link_to "Ver Mais<i class='fas fa-arrow-right'></i>".html_safe, sobre_path, class: "theme-btn style-two my-15" %>
+            <%= link_to "Nossos Serviços<i class='fas fa-arrow-right'></i>".html_safe, servicos_path, class: "read-more" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- About Section End -->
+<!-- Coach Section Start -->
+<section
+  class="coach-section rel z-1 pt-120 rpt-90 pb-100 rpb-70 bg-lighter"
+  >
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-6 col-lg-7 col-md-8">
+        <div class="section-title text-center mb-40">
+          <h2>Alguns dos Nossos Cursos</h2>
+        </div>
+      </div>
+    </div>
+    <ul class="coach-filter mb-35">
+      <li data-filter="*" class="current">Mostrar Todos</li>
+      <li data-filter=".combate-contra-as-drogas">Combate às Drogas</li>
+      <li data-filter=".concentracao">Concentração</li>
+      <li data-filter=".memorizacao">Táticas de Memorização</li>
+      <li data-filter=".super-leitura">Super Leitura</li>
+      <li data-filter=".outro">Outros</li>
+    </ul>
+    <div class="row coach-active justify-content-center">
+      <% if @produtos %>
+        <% @produtos.each do |produto| %>
+          <div class="col-lg-4 col-md-6 item <%= produto.tipo_curso.gsub(" ", "-").downcase.parameterize %>">
+            <div class="coach-item wow fadeInUp delay-0-2s">
+              <div class="coach-image">
+                <a href="#" class="category"
+                  ><%= produto.tipo_curso %></a
+                  >
+                <%= cl_image_tag produto.foto.key, height: 250, width: 370, crop: :fill, alt: "imagem produto" %>
+              </div>
+              <div class="coach-content">
+                <h4><a href="#"><%= produto.nome %></a></h4>
+                <div class="ratting-price">
+                  <div class="ratting">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <span class="price"><%= produto.valor %></span>
+                </div>
+                <ul class="coach-footer">
+                  <li>
+                    <i class="far fa-file-alt"></i><span><%= produto.modulos %></span>
+                  </li>
+                  <li><i class="far fa-user"></i><span><%= produto.autor %></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% else %>
+        <h4 class="text-center">Sem Produtos</h4>
+      <% end %>
+    </div>
+  </div>
+</section>
+<!-- Coach Section End -->
+<!-- Work Process Section Start -->
+<section
+  class="work-process-section bg-white rel z-1 pt-130 rpt-100 pb-100 rpb-70"
+  >
+  <div class="container">
+    <div
+      class="row justify-content-between align-items-center pb-30 wow fadeInUp delay-0-2s"
+      >
+      <div class="col-xl-7 col-lg-8">
+        <div class="section-title">
+          <span class="sub-title mb-15">Como Funciona</span>
+          <h2>Veja Como Agendar uma Reunião ou um Evento Conosco!</h2>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="slider-arrow-btns text-lg-right mt-10">
+          <button class="work-prev">
+          <i class="fas fa-angle-left"></i>
+          </button>
+          <button class="work-next">
+          <i class="fas fa-angle-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="work-step-wrap wow fadeInUp delay-0-4s">
+      <div class="work-step-item">
+        <span class="number">01</span>
+        <div class="content">
+          <h4>Marque uma Consulta</h4>
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium
+          </p>
+        </div>
+      </div>
+      <div class="work-step-item">
+        <span class="number">02</span>
+        <div class="content">
+          <h4>
+            Faça uma Lista Sobre os Tópicos que você Deseja Abordar na
+            Consulta
+          </h4>
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium
+          </p>
+        </div>
+      </div>
+      <div class="work-step-item">
+        <span class="number">03</span>
+        <div class="content">
+          <h4>Compareça na Consulta!</h4>
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Work Process Section End -->
+<!-- Events Section Start -->
+<section class="events-section rel z-1 py-130 rpy-100 bg-blue text-white">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-7 col-lg-8 col-md-9">
+        <div class="section-title text-center mb-55">
+          <span class="sub-title mb-25">Nosso Blog!</span>
+          <h2>
+            Fique por Dentro das Últimas Notícias da Empresa e Eventos que
+            Iremos Comparecer!
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="event-wrap">
+      <% if @posts %>
+        <% @posts.each do |post| %>
+          <%= link_to post_path(post) do %>
+            <div class="event-item wow fadeInUp delay-0-2s ajeito-post">
+              <div class="image">
+                <%= cl_image_tag post.img_url.key, height: 220, width: 310, crop: :fill %>
+                <span class="date"><%= post.data %></span>
+              </div>
+              <div class="content">
+                <h4><%= post.title %></h4>
+                <span class="location"><%= post.body.split(/\\n/).join("<br />").html_safe %></span>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      <% else %>
+        <h4 class="text-center">Nenhum Post</h4>
+      <% end %>
+    </div>
+    <div class="blog-more-btn pt-30 text-center">
+      <%= link_to "Ver Mais Notícias <i class='fas fa-arrow-right'></i>".html_safe, posts_path, class: "theme-btn style-three mais-noticias" %>
+    </div>
+  </div>
+  <span class="bg-text">blog</span>
+  <%= image_tag "shapes/rectangle-dots.png", alt:"shape", class: "rectangle-dots" %>
+  <%= image_tag "shapes/circle-dots.png", alt:"shape", class: "circle-dots" %>
+</section>
+<!-- Events Section End -->
+<!-- Testimonials Section Start -->
+<section class="testimonials-section bg-white rel z-1 py-130 rpy-100">
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-lg-5">
+        <div
+          class="testimonial-left-content rmb-65 wow fadeInLeft delay-0-2s"
+          >
+          <div class="section-title">
+            <span class="sub-title mb-15">Testemunhos</span>
+            <h2>O que Nossos Clientes Dizem Sobre Nós</h2>
+          </div>
+          <p>
+            Quis autem veleum iure reprehenderit voluptate velit esse quam
+            nihil molestiae consequatur vel illum dolore eum fugiat quo
+            voluptas nulla pariatur
+          </p>
+          <h4 class="partner-title mt-25 mb-15">
+            Nós Temos <span>xxx+</span> Clientes Satisfeitos
+          </h4>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="testimonial-wrap wow fadeInRight delay-0-2s">
+          <div class="testimonial-item">
+            <div class="testimonial-author">
+              <%= image_tag "testimonials/author.jpg", alt:"autor" %>
+            </div>
+            <div class="testimonial-content">
+              <div class="designation">
+                <h4>Nome do Cliente</h4>
+                <span>Serviço Utilizado</span>
+              </div>
+              <p>
+                Voluptatem accusantium doloremq udantium totam rem aperiam
+                eaque quae abillo inventore veritatis et quasi architecto
+                beatae Sed ut perspiciatis unde omnis iste natus error sit
+              </p>
+              <div class="ratting">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item">
+            <div class="testimonial-author">
+              <%= image_tag "testimonials/author.jpg", alt:"autor" %>
+            </div>
+            <div class="testimonial-content">
+              <div class="designation">
+                <h4>Nome do Cliente</h4>
+                <span>Serviço Utilizado</span>
+              </div>
+              <p>
+                Sed ut perspiciatis unde omnis iste natus error sit
+                voluptatem accusantium doloremq udantium totam rem aperiam
+                eaque quae abillo inventore veritatis et quasi architecto
+                beatae
+              </p>
+              <div class="ratting">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item">
+            <div class="testimonial-author">
+              <%= image_tag "testimonials/author.jpg", alt:"autor" %>
+            </div>
+            <div class="testimonial-content">
+              <div class="designation">
+                <h4>Nome do Cliente</h4>
+                <span>Serviço Utilizado</span>
+              </div>
+              <p>
+                Sed ut perspiciatis unde omnis iste natus error sit
+                voluptatem accusantium doloremq udantium totam rem aperiam
+                eaque quae abillo inventore veritatis et quasi architecto
+                beatae
+              </p>
+              <div class="ratting">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item">
+            <div class="testimonial-author">
+              <%= image_tag "testimonials/author.jpg", alt:"autor" %>
+            </div>
+            <div class="testimonial-content">
+              <div class="designation">
+                <h4>Nome do Cliente</h4>
+                <span>Serviço Utilizado</span>
+              </div>
+              <p>
+                Voluptatem accusantium doloremq udantium totam rem aperiam
+                eaque quae abillo inventore veritatis et quasi architecto
+                beatae Sed ut perspiciatis unde omnis iste natus error sit
+              </p>
+              <div class="ratting">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Testimonials Section End -->
+<!-- Instagram Section Start -->
+<div class="instagram-section pb-120 rpb-90">
+  <div class="container-fluid">
+    <div class="row small-gap justify-content-center">
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+        <div class="instagram-item wow fadeInUp delay-0-1s">
+          <%= image_tag "instagram/instagram1.jpg", alt:"Instagram" %>
+          <div class="instagram-hover">
+            <a href="instagram/instagram1.jpg">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+        <div class="instagram-item wow fadeInUp delay-0-2s">
+          <%= image_tag "instagram/instagram2.jpg", alt:"Instagram" %>
+          <div class="instagram-hover">
+            <a href="instagram/instagram2.jpg">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+        <div class="instagram-item wow fadeInUp delay-0-3s">
+          <%= image_tag "instagram/instagram3.jpg", alt:"Instagram" %>
+          <div class="instagram-hover">
+            <a href="instagram/instagram3.jpg">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+        <div class="instagram-item wow fadeInUp delay-0-4s">
+          <%= image_tag "instagram/instagram4.jpg", alt:"Instagram" %>
+          <div class="instagram-hover">
+            <a href="instagram/instagram4.jpg">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+        <div class="instagram-item wow fadeInUp delay-0-5s">
+          <%= image_tag "instagram/instagram5.jpg", alt:"Instagram" %>
+          <div class="instagram-hover">
+            <a href="instagram/instagram5.jpg">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+        <div class="instagram-item wow fadeInUp delay-0-6s">
+          <%= image_tag "instagram/instagram6.jpg", alt:"Instagram" %>
+          <div class="instagram-hover">
+            <a href="instagram/instagram6.jpg">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Instagram Section End -->
+<script>
+  document.querySelectorAll(".navbar-collapse.collapse.clearfix .navigation.clearfix>li").forEach((element) => {
+    if(element.innerText.toUpperCase() === "HOME") {
+      element.classList.add("current")
+    } else {
+      element.classList.remove("current")
+    }
+  });
+</script>

@@ -1,0 +1,24 @@
+<section class="blog margin-top margin-bottom container text-center">
+  <div>
+    <% valor = 0 %>
+    <% @produtos.each do |produto| %>
+      <div class="post">
+        <%= cl_image_tag produto.foto.key, height: 300, width: 400, crop: :fill, alt: "produto-#{valor}" %>
+        <h4><%= produto.nome %></h4>
+        <p><%= produto.desc.split(/\\n/).join("<br />").html_safe %></p>
+        <%= link_to "Ver Mais", produto_path(produto), class: "continuar" %>
+      </div>
+      <% valor += 1 %>
+    <% end %>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll(".navbar-collapse.collapse.clearfix .navigation.clearfix>li").forEach((element) => {
+    if(element.innerText.toUpperCase() === "LOJA") {
+      element.classList.add("current")
+    } else {
+      element.classList.remove("current")
+    }
+  });
+</script>

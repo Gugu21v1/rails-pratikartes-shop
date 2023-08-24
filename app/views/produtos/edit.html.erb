@@ -1,0 +1,25 @@
+<section class="container text-center p-5 margin-top-form form-login">
+  <div class="container mt-5">
+    <%= simple_form_for(@produto) do |f| %>
+      <%= f.input :nome, placeholder: "Digite o Nome do Produto", label: "Produto" %>
+      <%= f.input :desc, placeholder: "Descrição do Produto", label: "Digite a descrição do produto", :input_html => {:rows => 8 } %>
+      **Para pular linhas no corpo do texto, adicione \n
+      <%= f.input :valor, label: "Valor do Produto" %>
+      <%= f.input :autor, label: "Responsável" %>
+      <%= f.input :foto, as: :file, label: "Imagem do Produto" %>
+      <%= f.input :tipo_produto, label: "Tipo do Produto", as: :select, collection: {"Curso" => "Curso", "Ebook" => "Ebook", "Livro" => "Livro", "Desintoxicação" => "Desintoxicação", "Palestra" => "Palestra", "Outro" => "Outro"} %>
+      <%= f.input :tipo_curso, label: "Tipo do curso", as: :select, collection: {"Combate contra as Drogas" => "Combate contra as Drogas", "Memorização" => "Memorização", "Concentração" => "Concentração", "Super Leitura" => "Super Leitura", "Outro" => "Outro"} %>
+      <%= f.input :modulos, label: "Quantidade de módulos", as: :numeric %>
+      <%= f.submit "Criar post", class: "botao-submit" %>
+    <% end %>
+  </div>
+</section>
+<script>
+  document.querySelectorAll(".navbar-collapse.collapse.clearfix .navigation.clearfix>li").forEach((element) => {
+    if(element.innerText.toUpperCase() === "LOJA") {
+      element.classList.add("current")
+    } else {
+      element.classList.remove("current")
+    }
+  });
+</script>
