@@ -1,18 +1,52 @@
-<section class="blog margin-top margin-bottom container text-center">
-  <div>
-    <% valor = 0 %>
-    <% @produtos.each do |produto| %>
-      <div class="post">
-        <%= cl_image_tag produto.foto.key, height: 300, width: 400, crop: :fill, alt: "produto-#{valor}" %>
-        <h4><%= produto.nome %></h4>
-        <p><%= produto.desc.split(/\\n/).join("<br />").html_safe %></p>
-        <%= link_to "Ver Mais", produto_path(produto), class: "continuar" %>
+        <!-- Shop Page Start -->
+<section class="shop-page-area py-130 rpy-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="shop-sidebar rmb-55">
+          <div class="widget widget-menu wow fadeInUp delay-0-4s">
+            <h4 class="widget-title">Categoria</h4>
+            <ul>
+              <li class="categoria-item">Todos</li>
+              <li class="categoria-item">Combate às Drogas</li>
+              <li class="categoria-item">Coach Particular</li>
+              <li class="categoria-item">Ebook</li>
+              <li class="categoria-item">Livro</li>
+              <li class="categoria-item">Palestra</li>
+              <li class="categoria-item">Curso</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <% valor += 1 %>
-    <% end %>
+      <div class="col-lg-9">
+        <div class="prduct-items-wrap">
+          <div class="row">
+            <% if @produtos %>
+              <% @produtos.each do |produto| %>
+                <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6 wow fadeInUp delay-0-2s">
+                  <div class="product-item">
+                    <div class="product-image">
+                      <%= cl_image_tag produto.foto.key, height: 265, width: 270, style: "object-fit: cover;", alt: "imagem produto" %>
+                      <a href="#" class="cart-btn botao-comprar-todos">Comprar</a>
+                    </div>
+                    <div class="product-content">
+                      <h6 class="nome-produto-todos"><%= link_to produto.nome, produto_path(produto) %></h6>
+                      <span class="category"><%= produto.tipo_produto %></span> <br>
+                      <span class="price valor-produto-todos"><span><%= produto.valor %></span></span>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+            <% else %>
+              <h2 class="container text-center">Sem Produtos</h2>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
-
+<!-- Shop Page End -->
 <script>
   document.querySelectorAll(".navbar-collapse.collapse.clearfix .navigation.clearfix>li").forEach((element) => {
     if(element.innerText.toUpperCase() === "LOJA") {
@@ -20,5 +54,39 @@
     } else {
       element.classList.remove("current")
     }
+  });
+</script>
+<script>
+  let categorias = document.querySelectorAll(".widget.widget-menu.wow.fadeInUp.delay-0-4s ul li")
+  let itens = document.querySelectorAll(".category")
+  categorias.forEach((categoria) => {
+    categoria.addEventListener("click", function() {
+      if (categoria.innerText != "Todos") {
+        itens.forEach((item) => {
+          if(item.innerText != categoria.innerText) {
+            item.parentElement.parentElement.parentElement.classList.add("d-none")
+          } else {
+            item.parentElement.parentElement.parentElement.classList.remove("d-none")
+          }
+        });
+      } else {
+        itens.forEach((item) => {
+          item.parentElement.parentElement.parentElement.classList.remove("d-none")
+        });
+      }
+    })
+  });
+</script>
+<script>
+  let botoesComprar = document.querySelectorAll(".botao-comprar-todos")
+  botoesComprar.forEach((botao) => {
+    botao.addEventListener("click", function() {
+      window.open(`https://wa.me/5538991280123?text=*COMPRAR%20PRODUTO*%0A
+      *PRODUTO:*%20${botao.parentElement.parentElement.children[1].children[0].innerText}%0A
+      *VALOR%20DO%20PRODUTO:*%20R$${botao.parentElement.parentElement.children[1].children[3].innerText}%0A
+      *QUANTIDADE:*%20${1}%0A
+      ---------------------------------%0A
+      *TOTAL:*%20R$${1 * parseInt(botao.parentElement.parentElement.children[1].children[3].innerText)}`)
+    })
   });
 </script>

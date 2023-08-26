@@ -1,3 +1,6 @@
+<!-- Preloader -->
+<div class="preloader"></div>
+
 <!-- main header -->
       <header class="main-header">
         <!-- Header-Top -->
@@ -98,10 +101,10 @@
 
               <!-- Menu Button -->
               <div class="menu-btn-sidebar d-flex align-items-center">
-                <button class="cart">
+                <%# <button class="cart">
                   <i class="fas fa-shopping-bag"></i>
-                </button>
-                <button><i class="fas fa-cog"></i></button>
+                </button> %>
+                <%= link_to "<i class='fas fa-cog'></i>".html_safe, admin_path, class: "botao-admin" %>
 
                 <!-- menu sidbar -->
                 <div class="menu-sidebar">
@@ -117,3 +120,50 @@
         </div>
         <!--End Header Upper-->
       </header>
+<!--Form Back Drop-->
+<div class="form-back-drop"></div>
+<!-- Hidden Sidebar -->
+<section class="hidden-bar">
+  <div class="inner-box text-center">
+    <div class="cross-icon"><span class="fa fa-times"></span></div>
+    <div class="title">
+      <h4>Marcar uma Reunião</h4>
+    </div>
+    <!--Appointment Form-->
+    <div class="appointment-form">
+      <form method="post" action="#">
+        <div class="form-group">
+          <input
+            type="text"
+            name="text"
+            value=""
+            placeholder="Nome"
+            required
+            />
+        </div>
+        <div class="form-group">
+          <input
+            type="email"
+            name="email"
+            value=""
+            placeholder="Email"
+            required
+            />
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Mensagem" rows="5"></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="theme-btn">Enviar</button>
+        </div>
+      </form>
+    </div>
+    <!--Social Icons-->
+    <div class="social-style-one">
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</section>
+<!--End Hidden Sidebar -->

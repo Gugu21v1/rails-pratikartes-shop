@@ -1,3 +1,419 @@
+<style>
+  .main-menu .navbar-collapse li a {
+    color: #fff;
+  }
+</style>
+<!-- Page Banner Start -->
+<section
+        class="page-banner-area rel z-1 text-white text-center"
+        style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url(<%= image_path 'banner-sobre.jpg', alt:'banner' %>)"
+      >
+  <div class="container">
+    <div class="banner-inner rpt-10">
+      <h2 class="page-title wow fadeInUp delay-0-2s">Sobre Nós</h2>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb wow fadeInUp delay-0-4s">
+          <li class="breadcrumb-item"><a href="/">home</a></li>
+          <li class="breadcrumb-item active">Sobre Nós</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <%= image_tag "shapes/circle-one.png", alt:"Circle", class: "circle-one" %>
+  <%= image_tag "shapes/circle-two.png", alt:"Circle", class: "circle-two" %>
+</section>
+<!-- Page Banner End -->
+<!-- About Section Start -->
+<section class="about-page-section pt-120 rpt-90">
+  <div class="container">
+    <div class="row align-items-center large-gap">
+      <div class="col-lg-5">
+        <div class="about-page-content wow fadeInLeft delay-0-2s">
+          <div class="section-title mb-30">
+            <span class="sub-title-two">Um Pouco Sobre a Empresa</span>
+            <h2>
+              O Que Esperar da Palestras, Cursos e Treinamentos da
+              Pratikartes?
+            </h2>
+          </div>
+          <p>
+            Sit amet consectetur adipiscing eiusmo tempor indun ut labore
+            et dolore magna aliquaes suspendisse ultrice gravid commodo
+            viverra maecenas accusan
+          </p>
+          <b
+                  >Quis autem vel eum rerehenderit quivol uptate velit esse quam
+            molestiae consequature</b
+                >
+          <div class="about-btns pt-25">
+            <%= link_to "Entrar em Contato <i class='fas fa-arrow-right'></i>".html_safe, "#", class: "theme-btn my-15" %>
+            <%= link_to "Ver Serviços <i class='fas fa-arrow-right'></i>".html_safe, servicos_path, class: "read-more" %>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 display-flex-lg">
+        <div
+                class="about-page-middle rpt-55 rpb-30 wow fadeInRight delay-0-2s"
+              >
+          <%= image_tag "about/about-page.png", alt:"About" %>
+          <div class="circle-content">
+            <b>XX</b>
+            <span>Anos de Experiência</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="counter-wrap style-two wow fadeInRight delay-0-4s">
+          <div class="success-item">
+            <span class="count-text plus" data-speed="3000" data-stop="45"
+                    >0</span
+                  >
+            <span>Eventos
+              Participados</span>
+          </div>
+          <div class="success-item">
+            <span class="count-text plus" data-speed="3000" data-stop="7"
+                    >0</span
+                  >
+            <span>Cursos</span>
+          </div>
+          <div class="success-item">
+            <span class="count-text plus" data-speed="3000" data-stop="8"
+                    >0</span
+                  >
+            <span>Ebooks</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- About Section End -->
+<!-- Features Section Start -->
+<section
+        class="features-section-three rel z-1 pt-110 rpt-85 pb-100 rpb-70"
+      >
+  <div class="container">
+    <div class="section-title text-center mb-55">
+      <span class="sub-title-two">Nossas Áreas</span>
+      <h2>Oportunidades Para Todos os Públicos</h2>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-3 col-sm-6">
+        <div class="feature-three-item wow fadeInUp delay-0-2s">
+          <div class="icon">
+            <%= image_tag "features/icon12.png", alt:"Icon", width: "50px" %>
+          </div>
+          <h4>Reuniões Online e Presenciais</h4>
+          <p>
+            Sed ut persiciatis omnis natus voluptate accsantie doloreue
+            laudantium
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="feature-three-item wow fadeInUp delay-0-4s">
+          <div class="icon">
+            <%= image_tag "features/icon7.png", alt:"Icon" %>
+          </div>
+          <h4>Cursos Focados</h4>
+          <p>
+            Sed ut persiciatis omnis natus voluptate accsantie doloreue
+            laudantium
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="feature-three-item wow fadeInUp delay-0-6s">
+          <div class="icon">
+            <%= image_tag "features/icon8.png", alt:"Icon" %>
+          </div>
+          <h4>Palestras</h4>
+          <p>
+            Sed ut persiciatis omnis natus voluptate accsantie doloreue
+            laudantium
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="feature-three-item wow fadeInUp delay-0-8s">
+          <div class="icon">
+            <%= image_tag "features/icon9.png", alt:"Icon" %>
+          </div>
+          <h4>Videoaulas</h4>
+          <p>
+            Sed ut persiciatis omnis natus voluptate accsantie doloreue
+            laudantium
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Features Section End -->
+<!-- Team Section Start -->
+<section
+        class="team-setion-two bg-lighter rel z-1 pt-120 rpt-90 pb-70 rpb-40"
+      >
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="section-title text-center mb-55">
+          <span class="sub-title-two">Conheça Nosso Time</span>
+          <h2>Temos Tudo Que Seu Evento Precisa</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="team-member-two wow fadeInUp delay-0-2s">
+          <div class="image">
+            <%= image_tag "teams/team1.jpg", alt:"Team Member" %>
+            <div class="social-style-two">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+          </div>
+          <div class="member-description">
+            <h4>Cláudio Prates</h4>
+            <span>CEO/Palestrante/Professor/Mais</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="team-member-two wow fadeInUp delay-0-4s">
+          <div class="image">
+            <%= image_tag "teams/team2.jpg", alt:"Team Member" %>
+            <div class="social-style-two">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+          </div>
+          <div class="member-description">
+            <h4>Cláudio Prates</h4>
+            <span>CEO/Palestrante/Professor/Mais</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="team-member-two wow fadeInUp delay-0-6s">
+          <div class="image">
+            <%= image_tag "teams/team3.jpg", alt:"Team Member" %>
+            <div class="social-style-two">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+          </div>
+          <div class="member-description">
+            <h4>Cláudio Prates</h4>
+            <span>CEO/Palestrante/Professor/Mais</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="team-member-two wow fadeInUp delay-0-8s">
+          <div class="image">
+            <%= image_tag "teams/team4.jpg", alt:"Team Member" %>
+            <div class="social-style-two">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+          </div>
+          <div class="member-description">
+            <h4>Cláudio Prates</h4>
+            <span>CEO/Palestrante/Professor/Mais</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Team Section End -->
+<!-- Advertise Area Start -->
+<section class="advertise-area pt-130 rpt-100 pb-90 rpb-60">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="advertise-item wow fadeInUp delay-0-2s">
+          <div class="content">
+            <h4>Deseja Fazer um Orçamento??</h4>
+            <p>
+              Sit amet consectetur adipiscing sed eiusmod tempore dolore
+              magna suspendisse
+            </p>
+            <%= link_to "Entrar em Contato <i class='fas fa-arrow-right'></i>".html_safe, "#", class: "theme-btn" %>
+          </div>
+          <div class="image">
+            <%= image_tag "advertise/advertise1.png", alt:"Advertise" %>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="advertise-item bg-two wow fadeInUp delay-0-4s">
+          <div class="content">
+            <h4>Veja a Nossa Loja</h4>
+            <p>
+              Amet consectetur adipiscing sed eius tempore dolore magna
+              suspens
+            </p>
+            <%= link_to "Ver Mais <i class='fas fa-arrow-right'></i>".html_safe, produtos_path, class: "theme-btn style-two" %>
+          </div>
+          <div class="image">
+            <%= image_tag "advertise/advertise2.png", alt:"Advertise" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Advertise Area End -->
+<!-- Why Learn Start -->
+<section class="why-learn-area pb-120 rpb-100">
+  <div class="container">
+    <div
+            class="row align-items-center large-gap wow fadeInLeft delay-0-2s"
+          >
+      <div class="col-lg-6">
+        <div class="why-learn-content rmb-35">
+          <div class="section-title mb-30">
+            <span class="sub-title-two">Por que Aprender Conosco?</span>
+            <h2>Temos Coachs e Conteúdos Exclusivos</h2>
+          </div>
+          <p>
+            On the other hand, we denounce with righteous indignation and
+            dislike men who are so beguiled and demoralized by the charms
+            of pleasure of the moment, so blinded by desire, that they
+            cannot foresee the pain and trouble that are bound to ensue
+            and equal blame belongs
+          </p>
+          <div class="why-learn-feature pt-30">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="feature-three-item">
+                  <div class="icon">
+                    <%= image_tag "features/icon10.png", alt:"Icon" %>
+                  </div>
+                  <h4>Serviço de Coaching</h4>
+                  <p>
+                    Accutium doloremque lauda totarem aperiam eaque quaeo
+                    inventore veritatis quase
+                  </p>
+                  <%= link_to "Saiba Mais <i class='fas fa-arrow-right'></i>".html_safe, "#", class: "read-more color-two" %>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="feature-three-item">
+                  <div class="icon">
+                    <%= image_tag "features/icon11.png", alt:"Icon" %>
+                  </div>
+                  <h4>Ebooks Didáticos</h4>
+                  <p>
+                    Quis autem vel eureh enderit voluptate velit esse
+                    nihlestiae consuatur veillum dolore
+                  </p>
+                  <%= link_to "Saiba Mais <i class='fas fa-arrow-right'></i>".html_safe, "#", class: "read-more color-two" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="why-learn-image wow fadeInRight delay-0-2s">
+          <%= image_tag "about/why-learn.jpg", alt:"Why Learn" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Why Learn End -->
+<!-- Testimonials Section Start -->
+<section
+        class="testimonials-section-two my-80 rel z-1 wow fadeInUp delay-0-2s"
+      >
+  <div class="container">
+    <div class="testimonial-two-wrap">
+      <div class="testimonial-item-two">
+        <div class="testimonial-author-two">
+          <%= image_tag "testimonials/testimonial-two2.jpg", alt:"Author" %>
+        </div>
+        <div class="testimonial-content-two">
+          <div class="designation">
+            <h3>Nome Cliente</h3>
+            <span>Serviço Utilizado</span>
+          </div>
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremq udantium totam rem aperiam eaque quae
+            abillo inventore veritatis et quasi architecto beatae
+          </p>
+          <div class="ratting">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-item-two">
+        <div class="testimonial-author-two">
+          <%= image_tag "testimonials/testimonial-two2.jpg", alt:"Author" %>
+        </div>
+        <div class="testimonial-content-two">
+          <div class="designation">
+            <h3>Nome Cliente</h3>
+            <span>Serviço Utilizado</span>
+          </div>
+          <p>
+            Aperiam eaque quae abillo inventore veritatis et quasi
+            architecto beatae Sed ut perspiciatis unde omnis iste natus
+            error sit voluptatem accusantium doloremq udantium totam rem
+          </p>
+          <div class="ratting">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-item-two">
+        <div class="testimonial-author-two">
+          <%= image_tag "testimonials/testimonial-two2.jpg", alt:"Author" %>
+        </div>
+        <div class="testimonial-content-two">
+          <div class="designation">
+            <h3>Nome Cliente</h3>
+            <span>Serviço Utilizado</span>
+          </div>
+          <p>
+            Voluptatem accusantium doloremq udantium totam rem Sed ut
+            perspiciatis unde omnis iste natus error sit aperiam eaque
+            quae abillo inventore veritatis et quasi architecto beatae
+          </p>
+          <div class="ratting">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Testimonials Section End -->
 <script>
   document.querySelectorAll(".navbar-collapse.collapse.clearfix .navigation.clearfix>li").forEach((element) => {
     if(element.innerText.toUpperCase() === "SOBRE") {

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "ceo", to: "pages#ceo"
   get "servicos", to: "pages#servicos"
   get "sobre", to: "pages#sobre"
+  get "admin", to: "pages#admin"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

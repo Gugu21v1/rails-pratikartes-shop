@@ -22,3 +22,44 @@
   overflow: hidden;
   word-wrap: break-word;
 }
+
+.display-flex-lg {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-menu .mobile-logo {
+  margin-bottom: 0;
+}
+
+.descricao-post {
+  max-height: 70px;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.cart-btn {
+  text-align: center;
+}
+
+.excluir {
+  text-decoration: underline;
+  color: #ff0000;
+}
+
+.categoria-item {
+  cursor: pointer;
+  transition: ease .4s all;
+
+  &:hover {
+    color: #00cc83;
+  }
+}
+
+@media (max-width: 991px) {
+  .botao-admin {
+    display: none;
+  }
+}

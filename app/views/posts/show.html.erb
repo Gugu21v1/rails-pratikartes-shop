@@ -1,24 +1,60 @@
-<section class="container text-center mt-3">
-  <h1>
-    <%= @post.title %>
-  </h1>
-  <%= cl_image_tag @post.img_url.key, height: 300, width: 400, crop: :fill %>
-  <br>
-  <p id="texto-blog"><span class="ms-3"></span><%= @post.body.split(/\\n/).join("<br />").html_safe %></p>
-  <br>
-  <br>
-  <%= @post.data %>
-  <br>
-  <% if current_user %>
-    <% if current_user.admin == true %>
-      <%= link_to "Excluir Post",
+<!-- Blog Details Start -->
+<section class="blog-details-area py-130 rpy-100">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <%= link_to "<i class='fas fa-arrow-left'></i> Retornar ao Blog".html_safe, posts_path, class: "mb-5 pb-5" %>
+        <div class="blog-details-wrap">
+          <div class="image mb-25 wow fadeInUp delay-0-2s">
+            <%= cl_image_tag @post.img_url.key, height: 450, width: 720, style: "object-fit: cover;", alt: "imagem produto" %>
+          </div>
+          <ul class="blog-standard-header wow fadeInUp delay-0-2s">
+            <li><span class="name"><%= @post.autor %></span></li>
+            <li>
+              <i class="far fa-calendar-alt"></i>
+              <%= @post.data %>
+            </li>
+            <li>
+              <% if current_user %>
+                <% if current_user.admin == true %>
+                  <%= link_to "Excluir Post", post_path(@post), data: {turbo_method: :delete, turbo_confirm: "Você tem certeza que deseja excluir este Post? Essa ação não pode ser desfeita!"}, class: "excluir" %>
+                <% end %>
+              <% end %>
+            </li>
+          </ul>
+          <h3 class="title"><%= @post.title %></h3>
+          <p>
+            <%= @post.body.split(/\\n/).join("<br />").html_safe %>
+          </p>
+          <%= link_to "<i class='fas fa-arrow-left'></i> Retornar ao Blog".html_safe, posts_path, class: "me-5" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Blog Details End -->
+<!-- <section class="container text-center mt-3">
+<h1>
+  <%= @post.title %>
+</h1>
+<%= cl_image_tag @post.img_url.key, height: 300, width: 400, crop: :fill %>
+<br>
+<p id="texto-blog"><span class="ms-3"></span><%= @post.body.split(/\\n/).join("<br />").html_safe %></p>
+<br>
+<br>
+<%= @post.data %>
+<br>
+<% if current_user %>
+  <% if current_user.admin == true %>
+    <%= link_to "Excluir Post",
     post_path(@post),
     data: {turbo_method: :delete, turbo_confirm: "Você tem certeza que deseja excluir este Post? Essa ação não pode ser desfeita!"}
   %>
-    <% end %>
   <% end %>
-  <%= link_to "Posts", posts_path %>
+<% end %>
+<%= link_to "Posts", posts_path %>
 </section>
+-->
 <script>
   document.querySelectorAll(".navbar-collapse.collapse.clearfix .navigation.clearfix>li").forEach((element) => {
     if(element.innerText.toUpperCase() === "BLOG") {

@@ -37,6 +37,15 @@ https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.min.css
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+
+    <style>
+      .coach-item-three .image .price {
+        background: url( <%= image_path "coachs/course-price-bg.png" %> ) 100% 100%;
+      }
+      .section-title h2 span:not(.number), .section-title .h2 span:not(.number), .hero-content-three h1 span, .hero-content-three .h1 span {
+        background: url(<%= image_path "shapes/title-bg.png" %>) no-repeat right bottom;
+      }
+    </style>
   </head>
   <body>
     <div class="page-wrapper">

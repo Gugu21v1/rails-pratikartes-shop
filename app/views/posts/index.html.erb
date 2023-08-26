@@ -1,17 +1,69 @@
-<section class="blog margin-top margin-bottom">
-  <div>
-    <% valor = 0 %>
-    <% @posts.each do |post| %>
-      <div class="post">
-        <%= cl_image_tag post.img_url.key, height: 300, width: 400, crop: :fill, alt: "post-#{valor}" %>
-        <h4><%= post.title %></h4>
-        <p><%= post.body.split(/\\n/).join("<br />").html_safe %></p>
-        <%= link_to "Continuar Lendo", post_path(post), class: "continuar" %>
+<style>
+  .main-menu .navbar-collapse li a {
+    color: #fff;
+  }
+</style>
+<!-- Page Banner Start -->
+<section
+        class="page-banner-area rel z-1 text-white text-center"
+        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.9)), url(<%= image_path "banner-blog.jpg" %>)"
+      >
+  <div class="container">
+    <div class="banner-inner rpt-10">
+      <h2 class="page-title wow fadeInUp delay-0-2s">Nosso Blog</h2>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb wow fadeInUp delay-0-4s">
+          <li class="breadcrumb-item"><a href="/">home</a></li>
+          <li class="breadcrumb-item active">Nosso Blog</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <%= image_tag "shapes/circle-one.png", alt:"Circle", class: "circle-one" %>
+  <%= image_tag "shapes/circle-two.png", alt:"Circle", class: "circle-two" %>
+</section>
+<!-- Page Banner End -->
+<!-- Blog Standard Start -->
+<section class="blog-standard-area py-130 rpt-95 rpb-100">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="blog-standard-wrap">
+          <% if @posts %>
+            <% @posts.each do |post| %>
+              <div class="blog-standard-item wow fadeInUp delay-0-2s">
+                <div class="image">
+                  <%= cl_image_tag post.img_url.key, height: 450, width: 720, style: "object-fit: cover;", alt: "imagem produto" %>
+                </div>
+                <div class="blog-standard-content">
+                  <div class="content">
+                    <ul class="blog-standard-header">
+                      <li><span class="name">Autor</span></li>
+                      <li>
+                        <i class="far fa-calendar-alt"></i>
+                        <%= link_to post.data, post_path(post) %>
+                      </li>
+                    </ul>
+                    <h3>
+                      <%= link_to post.title, post_path(post) %>
+                    </h3>
+                    <p class="descricao-post">
+                      <%= post.body.split(/\\n/).join("<br />").html_safe %>
+                    </p>
+                    <%= link_to "Ver Mais <i class='fas fa-arrow-right'></i>".html_safe, post_path(post), class: "theme-btn style-two" %>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          <% else %>
+            <h2 class="container text-center">Sem Posts</h2>
+          <% end %>
+        </div>
       </div>
-      <% valor += 1 %>
-    <% end %>
+    </div>
   </div>
 </section>
+<!-- Blog Standard End -->
 <script>
   document.querySelectorAll(".navbar-collapse.collapse.clearfix .navigation.clearfix>li").forEach((element) => {
     if(element.innerText.toUpperCase() === "BLOG") {

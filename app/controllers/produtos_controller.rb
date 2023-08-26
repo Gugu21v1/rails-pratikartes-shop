@@ -6,6 +6,7 @@ class ProdutosController < ApplicationController
   end
 
   def show
+    @produtos = Produto.last(3)
     @produto = Produto.find(params[:id])
   end
 

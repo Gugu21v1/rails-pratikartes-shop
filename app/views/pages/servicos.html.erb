@@ -1,3 +1,89 @@
+<style>
+  .main-menu .navbar-collapse li a {
+    color: #fff;
+  }
+</style>
+<!-- Page Banner Start -->
+<section
+        class="page-banner-area rel z-1 text-white text-center"
+        style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.9)), url(<%= image_path 'banner-servico.jpg', alt:'banner' %>)"
+      >
+  <div class="container">
+    <div class="banner-inner rpt-10">
+      <h2 class="page-title wow fadeInUp delay-0-2s">Serviços</h2>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb wow fadeInUp delay-0-4s">
+          <li class="breadcrumb-item"><a href="/">home</a></li>
+          <li class="breadcrumb-item active">Serviços</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <%= image_tag "shapes/circle-one.png", alt:"circle", class: "circle-one" %>
+  <%= image_tag "shapes/circle-two.png", alt:"circle", class: "circle-two" %>
+</section>
+<!-- Page Banner End -->
+<!-- Instructors Section Start -->
+<section class="instructors-page pt-130 rpt-100 pb-70 rpb-40">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="instructor-item wow fadeInUp delay-0-2s">
+          <div class="image">
+            <%= image_tag "teams/team1.jpg", alt:"Produto" %>
+          </div>
+          <div class="member-description">
+            <h4>Combate Contra as Drogas</h4>
+            <span>Cursos, Livros e Acompanhamento Pessoal</span> <br>
+            <%= link_to "Ver Loja", produtos_path, class: "social-style-two ver-loja" %>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="instructor-item wow fadeInUp delay-0-4s">
+          <div class="image">
+            <%= image_tag "teams/team2.jpg", alt:"Produto" %>
+          </div>
+          <div class="member-description">
+            <h4>Coaching Pessoal</h4>
+            <span>Acompanhamento Online ou Presencial</span> <br>
+            <%= link_to "Ver Loja", produtos_path, class: "social-style-two ver-loja" %>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="instructor-item wow fadeInUp delay-0-6s">
+          <div class="image">
+            <%= image_tag "teams/team3.jpg", alt:"Produto" %>
+          </div>
+          <div class="member-description">
+            <h4>Palestras</h4>
+            <span>Palestras Sobre Diversos Temas</span>
+            <br>
+            <%= link_to "Ver Loja", produtos_path, class: "social-style-two ver-loja" %>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="instructor-item wow fadeInUp delay-0-8s">
+          <div class="image">
+            <%= image_tag "teams/team4.jpg", alt:"Produto" %>
+          </div>
+          <div class="member-description">
+            <h4>Treinamentos</h4>
+            <span
+                    >Treinamentos para Concursos Públicos, Enem e
+              Vestibulares</span
+                  >
+            <br>
+            <%= link_to "Ver Loja", produtos_path, class: "social-style-two ver-loja" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Instructors Section End -->
 <script>
   document.querySelectorAll(".navbar-collapse.collapse.clearfix .navigation.clearfix>li").forEach((element) => {
     if(element.innerText.toUpperCase() === "SERVIÇOS") {

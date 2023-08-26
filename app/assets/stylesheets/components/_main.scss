@@ -295,8 +295,7 @@ input[type=checkbox], input[type=radio] {
     .section-title h2 span:not(.number) {
       display: inline-block;
       padding: 0 15px 10px 10px;
-      margin: 0 -15px -10px -10px;
-      background: url(../images/shapes/title-bg.png) no-repeat right bottom; }
+      margin: 0 -15px -10px -10px; }
 
 .sub-title {
   color: white;
@@ -3143,7 +3142,7 @@ h1, h2, h3, h4, h5, h6, .bg-text, .coach-filter li, .newsletter-radios {
           padding: 10px 10px;
           line-height: 22px; } }
     .main-menu .navbar-collapse li.current > a, .main-menu .navbar-collapse li.current-menu-item > a, .main-menu .navbar-collapse li > a:hover {
-      color: #204ecf;
+      color: #204ecf !important;
       text-decoration: underline; }
     .main-menu .navbar-collapse li li {
       border-top: 1px solid #f3f3f3; }
@@ -3248,8 +3247,7 @@ h1, h2, h3, h4, h5, h6, .bg-text, .coach-filter li, .newsletter-radios {
   padding: 10px;
   max-width: 200px;
   position: relative;
-  margin-top: -15px;
-  margin-bottom: -15px; }
+  margin-top: -15px; }
 
 /* Menu Right icons */
 .menu-btn-sidebar button {
@@ -4188,7 +4186,6 @@ h1, h2, h3, h4, h5, h6, .bg-text, .coach-filter li, .newsletter-radios {
   padding-bottom: 125px; }
   .page-banner-area::before {
     position: absolute;
-    content: "";
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -5466,8 +5463,7 @@ h1, h2, h3, h4, h5, h6, .bg-text, .coach-filter li, .newsletter-radios {
       align-items: center;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center;
-      background: url(../images/coachs/course-price-bg.png) 100% 100%; }
+      justify-content: center; }
       .coach-item-three .image .price:before {
         content: 'R$'; }
   .coach-item-three .content {
@@ -7287,6 +7283,7 @@ blockquote {
       margin-top: 0; }
       @media only screen and (max-width: 991px) {
         .counter-wrap.style-two .success-item:first-child {
+          max-width: 70px;
           margin-top: 35px; } }
   .counter-wrap.style-two .count-text {
     color: #00cc83; }
@@ -7903,7 +7900,6 @@ blockquote {
       padding: 5px 15px;
       border-radius: 5px;
       display: inline-block;
-      text-transform: capitalize;
       background: #00cc83;
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
@@ -7927,12 +7923,12 @@ blockquote {
       font-weight: 700;
       margin-right: 5px; }
       .product-item .product-content .price del:before {
-        content: '$'; }
+        content: 'R$'; }
     .product-item .product-content .price span {
       font-weight: 800;
       color: #00cc83; }
       .product-item .product-content .price span:before {
-        content: '$'; }
+        content: 'R$'; }
   .product-item:hover .product-image:before {
     opacity: 0.75; }
   .product-item:hover .product-image .cart-btn {
@@ -8015,7 +8011,7 @@ blockquote {
     font-weight: 800;
     color: #204ecf; }
     .product-details-content .ratting-price .price:before {
-      content: '$'; }
+      content: 'R$'; }
 
 .product-details-content .category-tags li {
   margin-bottom: 10px; }
@@ -8167,7 +8163,7 @@ blockquote {
     margin-top: 15px;
     color: #00cc83; }
     .pricin-item .price:before {
-      content: '$';
+      content: 'R$';
       font-size: 24px; }
     .pricin-item .price:after {
       font-size: 18px;
@@ -8782,7 +8778,7 @@ blockquote {
       margin-right: 15px;
       color: #00cc83; }
       .widget-course-details .price-off .price:before {
-        content: '$'; }
+        content: 'R$'; }
     .widget-course-details .price-off .off {
       color: white;
       font-size: 13px;
@@ -9003,7 +8999,7 @@ blockquote {
   -ms-flex-pack: justify;
   justify-content: space-between; }
   .widget-price-filter .price span:before {
-    content: '$'; }
+    content: 'R$'; }
 
 .widget-price-filter #price {
   padding: 0;
