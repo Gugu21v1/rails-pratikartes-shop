@@ -2,8 +2,9 @@
   <div class="container mt-5">
     <%= simple_form_for(@post) do |f| %>
       <%= f.input :title, placeholder: "Digite o Título do post", label: "Título" %>
-      <%= f.input :body, placeholder: "Texto", label: "Digite o corpo do texto", as: :text %>
+      <%= f.input :body, placeholder: "Texto", label: "Digite o corpo do texto", as: :text, :input_html => {:rows => 8 } %>
       **Para pular linhas no corpo do texto, adicione \n
+      <%= f.input :autor, placeholder: "Digite o Autor do post", label: "Autor" %>
       <br>
       <br>
       <%= f.input :img_url, as: :file, label: "Imagem" %>
@@ -11,7 +12,6 @@
     <% end %>
   </div>
 </section>
-
 <script>
   document.querySelectorAll(".navbar-collapse.collapse.clearfix .navigation.clearfix>li").forEach((element) => {
     if(element.innerText.toUpperCase() === "BLOG") {

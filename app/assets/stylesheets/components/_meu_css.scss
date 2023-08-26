@@ -30,10 +30,6 @@
   justify-content: center;
 }
 
-.main-menu .mobile-logo {
-  margin-bottom: 0;
-}
-
 .descricao-post {
   max-height: 70px;
   overflow: hidden;
@@ -62,4 +58,13 @@
   .botao-admin {
     display: none;
   }
+}
+
+.editar {
+  color: rgb(183, 183, 23);
+  text-decoration: underline;
+}
+
+.tab-pane.active.show#details p, .post-text {
+  word-wrap: break-word;
 }

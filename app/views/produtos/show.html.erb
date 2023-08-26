@@ -18,10 +18,11 @@
       </div>
       <div class="col-lg-5">
         <div class="product-details-content wow fadeInRight delay-0-2s">
-          <%= link_to "<i class='fas fa-arrow-left'></i> Todos os Produtos".html_safe, produtos_path, class: "me-5" %>
+          <%= link_to "<i class='fas fa-arrow-left'></i> Todos os Produtos".html_safe, produtos_path, class: "me-3" %>
           <% if current_user %>
             <% if current_user.admin == true %>
-              <%= link_to "Excluir produto", produto_path(@produto), data: {turbo_method: :delete, turbo_confirm: "Você tem certeza que deseja excluir este produto? Essa ação não pode ser desfeita!"}, class: "excluir" %>
+              <%= link_to "<i class='fas fa-pencil'></i>Editar Produto".html_safe, edit_produto_path(@produto), class: "me-3 editar" %>
+              <%= link_to "<i class='fas fa-trash'></i>Excluir produto".html_safe, produto_path(@produto), data: {turbo_method: :delete, turbo_confirm: "Você tem certeza que deseja excluir este produto? Essa ação não pode ser desfeita!"}, class: "excluir" %>
             <% end %>
           <% end %>
           <h2 class="nome-produto"><%= @produto.nome %></h2>

@@ -6,7 +6,7 @@
         <%= link_to "<i class='fas fa-arrow-left'></i> Retornar ao Blog".html_safe, posts_path, class: "mb-5 pb-5" %>
         <div class="blog-details-wrap">
           <div class="image mb-25 wow fadeInUp delay-0-2s">
-            <%= cl_image_tag @post.img_url.key, height: 450, width: 720, style: "object-fit: cover;", alt: "imagem produto" %>
+            <%= cl_image_tag @post.img_url.key, height: 450, width: 720, style: "object-fit: cover;", alt: "imagem post" %>
           </div>
           <ul class="blog-standard-header wow fadeInUp delay-0-2s">
             <li><span class="name"><%= @post.autor %></span></li>
@@ -23,7 +23,7 @@
             </li>
           </ul>
           <h3 class="title"><%= @post.title %></h3>
-          <p>
+          <p class="post-text">
             <%= @post.body.split(/\\n/).join("<br />").html_safe %>
           </p>
           <%= link_to "<i class='fas fa-arrow-left'></i> Retornar ao Blog".html_safe, posts_path, class: "me-5" %>
