@@ -22,23 +22,25 @@
         <div class="prduct-items-wrap">
           <div class="row">
             <% if @produtos %>
-              <% @produtos.each do |produto| %>
-                <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6 wow fadeInUp delay-0-2s">
-                  <div class="product-item">
-                    <div class="product-image">
-                      <%= cl_image_tag produto.foto.key, height: 265, width: 270, style: "object-fit: cover;", alt: "imagem produto" %>
-                      <a href="#" class="cart-btn botao-comprar-todos">Comprar</a>
-                    </div>
-                    <div class="product-content">
-                      <h6 class="nome-produto-todos"><%= link_to produto.nome, produto_path(produto) %></h6>
-                      <span class="category"><%= produto.tipo_produto %></span> <br>
-                      <span class="price valor-produto-todos"><span><%= produto.valor %></span></span>
+              <% if @produtos.size != 0 %>
+                <% @produtos.each do |produto| %>
+                  <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6 wow fadeInUp delay-0-2s">
+                    <div class="product-item">
+                      <div class="product-image">
+                        <%= cl_image_tag produto.foto.key, height: 265, width: 270, style: "object-fit: cover;", alt: "imagem produto" %>
+                        <a href="#" class="cart-btn botao-comprar-todos">Comprar</a>
+                      </div>
+                      <div class="product-content">
+                        <h6 class="nome-produto-todos"><%= link_to produto.nome, produto_path(produto) %></h6>
+                        <span class="category"><%= produto.tipo_produto %></span> <br>
+                        <span class="price valor-produto-todos"><span><%= produto.valor %></span></span>
+                      </div>
                     </div>
                   </div>
-                </div>
+                <% end %>
+              <% else %>
+                <h2 class="container text-center">Sem Produtos</h2>
               <% end %>
-            <% else %>
-              <h2 class="container text-center">Sem Produtos</h2>
             <% end %>
           </div>
         </div>

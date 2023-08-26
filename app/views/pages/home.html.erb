@@ -183,39 +183,39 @@
     </ul>
     <div class="row coach-active justify-content-center">
       <% if @produtos %>
-        <% @produtos.each do |produto| %>
-          <div class="col-lg-4 col-md-6 item <%= produto.tipo_curso.gsub(" ", "-").downcase.parameterize %>">
-            <div class="coach-item wow fadeInUp delay-0-2s">
-              <div class="coach-image">
-                <a href="#" class="category"
-                  ><%= produto.tipo_curso %></a
-                  >
-                <%= cl_image_tag produto.foto.key, height: 250, width: 370, crop: :fill, alt: "imagem produto" %>
-              </div>
-              <div class="coach-content">
-                <h4><a href="#"><%= produto.nome %></a></h4>
-                <div class="ratting-price">
-                  <div class="ratting">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <span class="price"><%= produto.valor %></span>
+        <% if @produtos.size != 0 %>
+          <% @produtos.each do |produto| %>
+            <div class="col-lg-4 col-md-6 item <%= produto.tipo_curso.gsub(" ", "-").downcase.parameterize %>">
+              <div class="coach-item wow fadeInUp delay-0-2s">
+                <div class="coach-image">
+                  <%= link_to produto.tipo_curso, produto_path(produto), class: "category" %>
+                  <%= cl_image_tag produto.foto.key, height: 250, width: 370, class: "lg-cover", alt: "imagem produto" %>
                 </div>
-                <ul class="coach-footer">
-                  <li>
-                    <i class="far fa-file-alt"></i><span><%= produto.modulos %></span>
-                  </li>
-                  <li><i class="far fa-user"></i><span><%= produto.autor %></span></li>
-                </ul>
+                <div class="coach-content">
+                  <h4><%= link_to produto.nome, produto_path(produto) %></h4>
+                  <div class="ratting-price">
+                    <div class="ratting">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <span class="price"><%= produto.valor %></span>
+                  </div>
+                  <ul class="coach-footer">
+                    <li>
+                      <i class="far fa-file-alt"></i><span><%= produto.modulos %></span>
+                    </li>
+                    <li><i class="far fa-user"></i><span><%= produto.autor %></span></li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
+          <% end %>
+        <% else %>
+          <h4 class="text-center">Sem Cursos</h4>
         <% end %>
-      <% else %>
-        <h4 class="text-center">Sem Produtos</h4>
       <% end %>
     </div>
   </div>
@@ -236,7 +236,7 @@
         </div>
       </div>
       <div class="col-lg-4">
-        <div class="slider-arrow-btns text-lg-right mt-10">
+        <div class="slider-arrow-btns text-lg-right mt-10 text-center">
           <button class="work-prev">
             <i class="fas fa-angle-left"></i>
           </button>
@@ -300,22 +300,24 @@
     </div>
     <div class="event-wrap">
       <% if @posts %>
-        <% @posts.each do |post| %>
-          <%= link_to post_path(post) do %>
-            <div class="event-item wow fadeInUp delay-0-2s ajeito-post">
-              <div class="image">
-                <%= cl_image_tag post.img_url.key, height: 220, width: 310, crop: :fill %>
-                <span class="date"><%= post.data %></span>
+        <% if @posts.size != 0 %>
+          <% @posts.each do |post| %>
+            <%= link_to post_path(post) do %>
+              <div class="event-item wow fadeInUp delay-0-2s ajeito-post">
+                <div class="image">
+                  <%= cl_image_tag post.img_url.key, height: 220, width: 310, class: "lg-cover", alt: "imagem post" %>
+                  <span class="date"><%= post.data %></span>
+                </div>
+                <div class="content">
+                  <h4><%= post.title %></h4>
+                  <span class="location"><%= post.body.split(/\\n/).join("<br />").html_safe %></span>
+                </div>
               </div>
-              <div class="content">
-                <h4><%= post.title %></h4>
-                <span class="location"><%= post.body.split(/\\n/).join("<br />").html_safe %></span>
-              </div>
-            </div>
+            <% end %>
           <% end %>
+        <% else %>
+          <h4 class="text-center">Nenhum Post</h4>
         <% end %>
-      <% else %>
-        <h4 class="text-center">Nenhum Post</h4>
       <% end %>
     </div>
     <div class="blog-more-btn pt-30 text-center">

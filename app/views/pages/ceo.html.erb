@@ -38,9 +38,7 @@
             <a href="#" class="theme-btn mt-10"
                     >Entrar em Contato <i class="fas fa-arrow-right"></i
                   ></a>
-            <a href="shop.html" class="theme-btn style-two mt-10"
-                    >Nossos Produtos <i class="fas fa-arrow-right"></i
-                  ></a>
+            <%= link_to "Nossos Produtos <i class='fas fa-arrow-right'></i>".html_safe, produtos_path, class: "theme-btn style-two mt-10" %>
           </div>
         </div>
       </div>
@@ -89,9 +87,7 @@
               incididunt labore dolore
             </p>
           </div>
-          <a href="servicos.html" class="read-more color-two"
-                  >Mais Serviços <i class="fas fa-arrow-right"></i
-                ></a>
+          <%= link_to "Mais Serviços <i class='fas fa-arrow-right'></i>".html_safe, servicos_path, class: "read-more color-two" %>
         </div>
       </div>
       <div class="col-lg-3 col-sm-6">
@@ -106,9 +102,7 @@
               incididunt labore dolore
             </p>
           </div>
-          <a href="servicos.html" class="read-more color-two"
-                  >Mais Serviços <i class="fas fa-arrow-right"></i
-                ></a>
+          <%= link_to "Mais Serviços <i class='fas fa-arrow-right'></i>".html_safe, servicos_path, class: "read-more color-two" %>
         </div>
       </div>
       <div class="col-lg-3 col-sm-6">
@@ -123,9 +117,7 @@
               incididunt labore dolore
             </p>
           </div>
-          <a href="servicos.html" class="read-more color-two"
-                  >Mais Serviços <i class="fas fa-arrow-right"></i
-                ></a>
+          <%= link_to "Mais Serviços <i class='fas fa-arrow-right'></i>".html_safe, servicos_path, class: "read-more color-two" %>
         </div>
       </div>
       <div class="col-lg-3 col-sm-6">
@@ -140,9 +132,7 @@
               incididunt labore dolore
             </p>
           </div>
-          <a href="servicos.html" class="read-more color-two"
-                  >Mais Serviços <i class="fas fa-arrow-right"></i
-                ></a>
+          <%= link_to "Mais Serviços <i class='fas fa-arrow-right'></i>".html_safe, servicos_path, class: "read-more color-two" %>
         </div>
       </div>
     </div>
@@ -169,9 +159,7 @@
             <li>100% Focada em você</li>
             <li>Resultados garantidos</li>
           </ul>
-          <a href="about.html" class="theme-btn style-three"
-                  >Ver Mais <i class="fas fa-arrow-right"></i
-                ></a>
+          <%= link_to "Ver Mais <i class='fas fa-arrow-right'></i>".html_safe, sobre_path, class: "theme-btn style-three" %>
         </div>
       </div>
       <div class="col-lg-6">
@@ -246,25 +234,31 @@
     </div>
     <div class="coach-slider">
       <% animacao = 2 %>
-      <% @produtos.each do |produto| %>
-        <div class="coach-item-three wow fadeInUp delay-0-<%=animacao%>s">
-          <div class="image">
-            <%= image_tag "coachs/course-three1.jpg", alt:"Coach" %>
-            <div class="price"><%= produto.valor %></div>
-          </div>
-          <div class="content">
-            <ul class="coach-footer">
-              <li>
-                <i class="far fa-file-alt"></i><span><%= produto.modulos %></span>
-              </li>
-            </ul>
-            <h4><a href="course-details.html"><%= produto.nome %></a></h4>
-          </div>
-        </div>
-        <% if animacao == 6 %>
-          <% animacao = 2 %>
+      <% if @produtos %>
+        <% if @produtos.size != 0 %>
+          <% @produtos.each do |produto| %>
+            <div class="coach-item-three wow fadeInUp delay-0-<%=animacao%>s">
+              <div class="image">
+                <%= cl_image_tag produto.foto.key, height: 240, width: 370, style: "object-fit: cover;", alt: "imagem produto" %>
+                <div class="price"><%= produto.valor %></div>
+              </div>
+              <div class="content">
+                <ul class="coach-footer">
+                  <li>
+                    <i class="far fa-file-alt"></i><span><%= produto.modulos %></span>
+                  </li>
+                </ul>
+                <%= link_to produto.nome, produto_path(produto) %>
+              </div>
+            </div>
+            <% if animacao == 6 %>
+              <% animacao = 2 %>
+            <% else %>
+              <% animacao +=2 %>
+            <% end %>
+          <% end %>
         <% else %>
-          <% animacao +=2 %>
+          <h4 class="container text-center">Sem Cursos</h4>
         <% end %>
       <% end %>
     </div>
@@ -392,7 +386,7 @@
               magna suspendisse
             </p>
             <a href="#" class="theme-btn"
-                    >Entrar Em Contato <i class="fas fa-arrow-right"></i
+                    >Entrar em Contato <i class="fas fa-arrow-right"></i
                   ></a>
           </div>
           <div class="image">
@@ -408,9 +402,7 @@
               Amet consectetur adipiscing sed eius tempore dolore magna
               suspens
             </p>
-            <a href="shop.html" class="theme-btn style-two"
-                    >Ver Mais<i class="fas fa-arrow-right"></i
-                  ></a>
+            <%= link_to "Ver Mais <i class='fas fa-arrow-right'></i>".html_safe, produtos_path, class: "theme-btn style-two" %>
           </div>
           <div class="image">
             <%= image_tag "advertise/advertise2.png", alt:"Advertise" %>
@@ -429,20 +421,26 @@
       <h2>Últimas Notícias & <span>Eventos</span> Confirmados!</h2>
     </div>
     <div class="row justify-content-center">
-      <% @posts.each do |post| %>
-        <div class="col-lg-4 col-md-6">
-          <div class="blog-item style-two middle-image wow fadeInUp delay-0-2s">
-            <h4>
-              <a href="blog-details.html"><%= post.title %></a>
-            </h4>
-            <ul class="blog-meta"></ul>
-            <div class="blog-image">
-              <%= cl_image_tag post.img_url.key, height: 200, width: 280, style: "object-fit: cover;" %>
-              <span class="date"><%= post.data %></span>
+      <% if @posts %>
+        <% if @posts.size != 0 %>
+          <% @posts.each do |post| %>
+            <div class="col-lg-4 col-md-6">
+              <div class="blog-item style-two middle-image wow fadeInUp delay-0-2s">
+                <h4>
+                  <%= link_to post.title, post_path(post) %>
+                </h4>
+                <ul class="blog-meta"></ul>
+                <div class="blog-image">
+                  <%= cl_image_tag post.img_url.key, height: 200, width: 280, style: "object-fit: cover;" %>
+                  <span class="date"><%= post.data %></span>
+                </div>
+                <%= link_to "Ler Mais <i class='fas fa-arrow-right'></i>".html_safe, post_path(post), class: "read-more" %>
+              </div>
             </div>
-            <%= link_to "Ler Mais <i class='fas fa-arrow-right'></i>".html_safe, post_path(post), class: "read-more" %>
-          </div>
-        </div>
+          <% end %>
+        <% else %>
+          <h4 class="text-center">Nenhum Post</h4>
+        <% end %>
       <% end %>
     </div>
   </div>
