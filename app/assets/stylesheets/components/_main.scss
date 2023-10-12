@@ -279,8 +279,6 @@ input[type=checkbox], input[type=radio] {
 .section-title {
   z-index: 1;
   position: relative; }
-  .section-title h2 {
-    text-transform: capitalize; }
     @media only screen and (max-width: 991px) and (min-width: 768px) {
       .section-title h2 {
         font-size: 40px; } }
@@ -829,8 +827,7 @@ a.theme-btn {
 /*******************************************************/
 h1, h2, h3, h4, h5, h6, .bg-text, .coach-filter li, .newsletter-radios {
   font-weight: 700;
-  color: #262d3d;
-  font-family: "Raleway", sans-serif; }
+  color: #262d3d;}
 
 /*******************************************************/
 /************** 04. Padding Margin Spacing *************/

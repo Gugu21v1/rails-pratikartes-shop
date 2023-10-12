@@ -9,7 +9,7 @@
     overflow: hidden
     min-width: 300px
     background: #FFFFFF
-    
+
 .container
     max-width: $container
     padding-left: $gutter/2
@@ -17,25 +17,24 @@
 
 .no-gap
     +colgap(0)
-    
+
 .small-gap
     +colgap(10px)
-    
+
 .large-gap
     +xld
         +colgap(75px)
-    
+
 .col-small
     +xsd
         flex: 0 0 100%
         max-width: 100%
-    
+
 /** Section Title style **/
 .section-title
     z-index: 1
     position: relative
     h2
-        text-transform: capitalize
         +tmd
             font-size: 40px
         +mod
@@ -50,7 +49,7 @@
                 padding: 0 15px 10px 10px
                 margin: 0 -15px -10px -10px
                 background: url(../images/shapes/title-bg.png) no-repeat right bottom
-    
+
 .sub-title
     color: white
     font-size: 15px
@@ -87,7 +86,7 @@
             top: 95%
             position: absolute
             background: url(../images/shapes/subtitle-line.png) no-repeat center/cover
-        
+
 .bg-text
     text-transform: uppercase
     position: absolute
@@ -157,7 +156,7 @@ a.theme-btn
             background: $yellow-color
     +smd
         padding: 12px 20px
-        
+
 /* Read More Btb */
 .read-more
     font-size: 15px
@@ -172,7 +171,7 @@ a.theme-btn
         float: right
         font-size: 13px
         margin-left: 10px
-        
+
 /* List style One */
 .list-style-one
     li
@@ -191,7 +190,7 @@ a.theme-btn
             font-family: 'Font Awesome 5 Free'
         &:not(:last-child)
             margin-bottom: 15px
-        
+
 /* List style Two */
 .list-style-two
     li
@@ -202,7 +201,7 @@ a.theme-btn
             margin-right: 10px
             color: $secondary-color
             font-family: "Font Awesome 5 Free"
-        
+
 /* List style Three */
 .list-style-three
     li
@@ -220,7 +219,7 @@ a.theme-btn
             margin-bottom: 10px
         h5
             margin-bottom: 5px
-    
+
 /* List style Four */
 .list-style-four
     li
@@ -236,7 +235,7 @@ a.theme-btn
             margin-right: 10px
             color: $secondary-color
             font-family: "Font Awesome 5 Free"
-            
+
 /** Social Style One **/
 .social-style-one
     flex-wrap: wrap
@@ -248,8 +247,8 @@ a.theme-btn
         &:hover
             background: $secondary-color
         &:not(:last-child)
-            margin-right: 7px  
-        
+            margin-right: 7px
+
 /** Social Style two **/
 .social-style-two
     flex-wrap: wrap
@@ -313,9 +312,9 @@ a.theme-btn
             border-color: $secondary-color
             &:before
                 background: $secondary-color
-                
-    
-/* Pagination */    
+
+
+/* Pagination */
 .pagination
     align-items: center
     li
@@ -355,7 +354,7 @@ a.theme-btn
             &:hover:not(.disabled)
                 .page-link
                     background: $secondary-color
-                
+
 /*** Scroll Top style ***/
 .scroll-top
     position: absolute
@@ -368,24 +367,24 @@ a.theme-btn
     animation: pulse 2s infinite
     +circle($primary-color, 55px)
     line-height: 45px
-  
+
 /* Text White */
 .text-white
     *,
     .bg-text
         color: white
-        
+
 /* Position */
 .rel
     position: relative
-    
+
 @for $i from 0 through 5
     .z-#{0 + $i}
         z-index: 0 + $i
-    
+
 .overlay
     +overlay(black, 0.3)
-    
+
 /* Shapes */
 .circle-one,
 .circle-two,
@@ -410,7 +409,7 @@ a.theme-btn
     top: 25%
     right: 25%
     animation: 50s shapeAnimationTwo infinite
-    
+
 /* Backgruond Size */
 .bgs-cover
     background-size: cover
@@ -431,15 +430,14 @@ a.theme-btn
     background-color: $secondary-color
 .bg-black
     background-color: #141517
-     
+
 /* Border Radius */
 @for $i from 1 through 6
     .br-#{5 * $i}
         border-radius: 5px * $i
-    
+
 .home-one
     .section-title
         h2
             +xld
                 font-size: 48px
-    
